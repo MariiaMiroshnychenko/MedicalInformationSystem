@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="MedicalInformationSystem:MedIS exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/MedicalInformationSystem_MedIS_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="MedicalInformationSystem/web/MedIS" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="MedicalInformationSystem" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

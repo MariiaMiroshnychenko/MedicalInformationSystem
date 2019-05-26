@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MedicalInformationSystem:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="MedicalInformationSystem-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MedicalInformationSystem:war exploded" />
+    </root>
+  </artifact>
+</component>
