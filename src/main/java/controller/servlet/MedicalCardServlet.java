@@ -1,4 +1,4 @@
-package controller;
+package controller.servlet;
 
 import model.dao.implementation.JdbcDaoFactory;
 import model.entity.MedicalCard;
@@ -35,8 +35,6 @@ public class MedicalCardServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF8");
-
-
     }
 
 

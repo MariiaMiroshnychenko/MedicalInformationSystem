@@ -1,16 +1,14 @@
 package model.dao;
 
 import model.dao.implementation.*;
-import model.entity.MedicalCard;
 
 import java.sql.SQLException;
-import java.util.Optional;
 
 public abstract class DaoFactory {
     //    private static Optional<DaoFactory> daoFactory;
     private static DaoFactory daoFactory;
 
-    public abstract JdbcDaoUserData getDaoUserData();
+    public abstract JdbcDaoPersonalRegData getDaoUserData();
 
     public abstract JdbcDaoPatientVisit getDaoPatientVisit();
 

@@ -13,14 +13,11 @@ public class ConnectionPool {
         if (dataSource == null){
             synchronized (ConnectionPool.class) {
                 if (dataSource == null) {
-                    DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
-
                     BasicDataSource basicDataSource = new BasicDataSource();
-                    basicDataSource.setUrl("jdbc:mysql://localhost:3306/hospital_db?serverTimezone=UTC");
+                    basicDataSource.setDriverClassName("com.mysql.jdbc.Driver");
+                    basicDataSource.setUrl("jdbc:mysql://localhost:3306/medicine?useSSL=false&serverTimezone=UTC");
                     basicDataSource.setUsername("root");
                     basicDataSource.setPassword("root");
-                    basicDataSource.setMinIdle(5);
-                    basicDataSource.setMaxIdle(10);
                     basicDataSource.setMaxOpenPreparedStatements(100);
                     dataSource = basicDataSource;
                 }

@@ -4,9 +4,27 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>controller.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>FilterLogin</filter-name>
+        <filter-class>controller.filter.FilterLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterLogin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
     <servlet>
         <servlet-name>MedicalCardServlet</servlet-name>
-        <servlet-class>controller.MedicalCardServlet</servlet-class>
+        <servlet-class>controller.servlet.MedicalCardServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>MedicalCardServlet</servlet-name>

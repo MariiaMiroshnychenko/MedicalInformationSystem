@@ -14,11 +14,11 @@ public class PatientVisit {
     private String appointment;
     private Integer doctorId;
 
-    private List<UserData> userData = new ArrayList<>();
+    private List<PersonalRegData> personalRegData = new ArrayList<>();
 
     public PatientVisit(Integer id, Integer idReferralToDoctor, Integer patientId,
                         Date visitDate, String diagnosis, String appointment,
-                        Integer doctorId, List<UserData> userData) {
+                        Integer doctorId, List<PersonalRegData> personalRegData) {
         this.id = id;
         this.idReferralToDoctor = idReferralToDoctor;
         this.patientId = patientId;
@@ -26,7 +26,7 @@ public class PatientVisit {
         this.diagnosis = diagnosis;
         this.appointment = appointment;
         this.doctorId = doctorId;
-        this.userData = userData;
+        this.personalRegData = personalRegData;
     }
 
     public PatientVisit() {
@@ -88,12 +88,12 @@ public class PatientVisit {
         this.doctorId = doctorId;
     }
 
-    public List<UserData> getUserData() {
-        return userData;
+    public List<PersonalRegData> getPersonalRegData() {
+        return personalRegData;
     }
 
-    public void setUserData(List<UserData> userData) {
-        this.userData = userData;
+    public void setPersonalRegData(List<PersonalRegData> personalRegData) {
+        this.personalRegData = personalRegData;
     }
 
     @Override
@@ -108,13 +108,13 @@ public class PatientVisit {
                 Objects.equals(diagnosis, that.diagnosis) &&
                 Objects.equals(appointment, that.appointment) &&
                 Objects.equals(doctorId, that.doctorId) &&
-                Objects.equals(userData, that.userData);
+                Objects.equals(personalRegData, that.personalRegData);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, idReferralToDoctor, patientId, visitDate,
-                diagnosis, appointment, doctorId, userData);
+                diagnosis, appointment, doctorId, personalRegData);
     }
 
     @Override
@@ -127,7 +127,7 @@ public class PatientVisit {
                 ", diagnosis='" + diagnosis + '\'' +
                 ", appointment='" + appointment + '\'' +
                 ", doctorId=" + doctorId +
-                ", userData=" + userData +
+                ", personalRegData=" + personalRegData +
                 '}';
     }
 }

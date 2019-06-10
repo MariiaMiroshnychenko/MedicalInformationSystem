@@ -11,12 +11,12 @@ public class MedicalCard {
     private String finalDiagnosis;
     private String discharge;
 
-    private UserData userData;
+    private PersonalRegData personalRegData;
     private List<PatientVisit> patientVisit;
     private List<ExamResultByReferral> examResultByReferrals;
 
     public MedicalCard(Integer id, Integer patientId, Integer visitId, Integer refResultId,
-                       String finalDiagnosis, String discharge, UserData userData,
+                       String finalDiagnosis, String discharge, PersonalRegData personalRegData,
                        List<PatientVisit> patientVisit, List<ExamResultByReferral> examResultByReferrals) {
         this.id = id;
         this.patientId = patientId;
@@ -24,7 +24,7 @@ public class MedicalCard {
         this.refResultId = refResultId;
         this.finalDiagnosis = finalDiagnosis;
         this.discharge = discharge;
-        this.userData = userData;
+        this.personalRegData = personalRegData;
         this.patientVisit = patientVisit;
         this.examResultByReferrals = examResultByReferrals;
     }
@@ -80,12 +80,12 @@ public class MedicalCard {
         this.discharge = discharge;
     }
 
-    public UserData getUserData() {
-        return userData;
+    public PersonalRegData getPersonalRegData() {
+        return personalRegData;
     }
 
-    public void setUserData(UserData userData) {
-        this.userData = userData;
+    public void setPersonalRegData(PersonalRegData personalRegData) {
+        this.personalRegData = personalRegData;
     }
 
     public List<PatientVisit> getPatientVisit() {
@@ -115,7 +115,7 @@ public class MedicalCard {
                 Objects.equals(refResultId, that.refResultId) &&
                 Objects.equals(finalDiagnosis, that.finalDiagnosis) &&
                 Objects.equals(discharge, that.discharge) &&
-                Objects.equals(userData, that.userData) &&
+                Objects.equals(personalRegData, that.personalRegData) &&
                 Objects.equals(patientVisit, that.patientVisit) &&
                 Objects.equals(examResultByReferrals, that.examResultByReferrals);
     }
@@ -123,7 +123,7 @@ public class MedicalCard {
     @Override
     public int hashCode() {
         return Objects.hash(id, patientId, visitId, refResultId, finalDiagnosis,
-                discharge, userData, patientVisit, examResultByReferrals);
+                discharge, personalRegData, patientVisit, examResultByReferrals);
     }
 
     @Override
@@ -135,7 +135,7 @@ public class MedicalCard {
                 ", refResultId=" + refResultId +
                 ", finalDiagnosis='" + finalDiagnosis + '\'' +
                 ", discharge='" + discharge + '\'' +
-                ", userData=" + userData +
+                ", personalRegData=" + personalRegData +
                 ", patientVisit=" + patientVisit +
                 ", examResultByReferrals=" + examResultByReferrals +
                 '}';

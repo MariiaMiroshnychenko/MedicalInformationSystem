@@ -5,9 +5,7 @@ import model.dao.DaoFactory;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Optional;
 
 public class JdbcDaoFactory extends DaoFactory {
     private DataSource dataSource = ConnectionPool.getDataSource();
@@ -16,8 +14,8 @@ public class JdbcDaoFactory extends DaoFactory {
     }
 
     @Override
-    public JdbcDaoUserData getDaoUserData() {
-        return new JdbcDaoUserData(getConnection());
+    public JdbcDaoPersonalRegData getDaoUserData() {
+        return new JdbcDaoPersonalRegData(getConnection());
     }
 
     @Override

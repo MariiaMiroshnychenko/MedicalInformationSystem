@@ -12,12 +12,12 @@ public class Referral {
     private Integer doctorId;
     private Integer examResultId;
 
-    private UserData userData;
+    private PersonalRegData personalRegData;
     private ExamResultByReferral examResultByReferral;
 
     public Referral(Integer id, String refType, String actTitle, LocalDateTime refDate,
                     Integer patientId, Integer doctorId, Integer examResultId,
-                    UserData userData, ExamResultByReferral examResultByReferral) {
+                    PersonalRegData personalRegData, ExamResultByReferral examResultByReferral) {
         this.id = id;
         this.refType = refType;
         this.actTitle = actTitle;
@@ -25,7 +25,7 @@ public class Referral {
         this.patientId = patientId;
         this.doctorId = doctorId;
         this.examResultId = examResultId;
-        this.userData = userData;
+        this.personalRegData = personalRegData;
         this.examResultByReferral = examResultByReferral;
     }
 
@@ -88,12 +88,12 @@ public class Referral {
         this.examResultId = examResultId;
     }
 
-    public UserData getUserData() {
-        return userData;
+    public PersonalRegData getPersonalRegData() {
+        return personalRegData;
     }
 
-    public void setUserData(UserData userData) {
-        this.userData = userData;
+    public void setPersonalRegData(PersonalRegData personalRegData) {
+        this.personalRegData = personalRegData;
     }
 
     public ExamResultByReferral getExamResultByReferral() {
@@ -116,14 +116,14 @@ public class Referral {
                 Objects.equals(patientId, referral.patientId) &&
                 Objects.equals(doctorId, referral.doctorId) &&
                 Objects.equals(examResultId, referral.examResultId) &&
-                Objects.equals(userData, referral.userData) &&
+                Objects.equals(personalRegData, referral.personalRegData) &&
                 Objects.equals(examResultByReferral, referral.examResultByReferral);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(id, refType, actTitle, refDate, patientId, doctorId,
-                examResultId, userData, examResultByReferral);
+                examResultId, personalRegData, examResultByReferral);
     }
 
     @Override
@@ -136,7 +136,7 @@ public class Referral {
                 ", patientId=" + patientId +
                 ", doctorId=" + doctorId +
                 ", examResultId=" + examResultId +
-                ", userData=" + userData +
+                ", personalRegData=" + personalRegData +
                 ", examResultByReferral=" + examResultByReferral +
                 '}';
     }
